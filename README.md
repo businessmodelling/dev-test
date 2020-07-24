@@ -6,6 +6,7 @@ The challenge is to build a full-stack application to display the data and to br
 
 Feel free to spend as much or as little time on the exercise as you like as long as the following requirements have been met.
 
+- Project must be hosted on a public repository (GitHub/Bitbucket)
 - Feel free to use whatever FE framework (Angular/React/Vue.js) / libraries / packages you like
   - State management capability
   - Styling appropriate to choice of framework (do not use pre-existing CSS/design system)
