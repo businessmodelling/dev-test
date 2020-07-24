@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Yokohama",
+    "address": "331 Roundhay Road, Harehills, Leeds LS8 4HT",
+    "cuisine": ["Japanese", "Asian", "Healthy"],
+    "family-friendly": false,
+    "vegan-options": true,
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Falafel Guys",
+    "address": "50 Briggate, Leeds, LS1 6HD",
+    "cuisine": ["Fast food", "Healthy", "British"],
+    "family-friendly": true,
+    "vegan-options": true,
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Bengal Brasserie",
+    "address": "65 Haddon Road, Burley, Leeds, LS4 2JE",
+    "cuisine": ["Indian", "Asian", "Bar"],
+    "family-friendly": true,
+    "vegan-options": true,
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "name": "Gaucho",
+    "address": "21-22 Park Row, Leeds LS1 5JF England",
+    "cuisine": ["Steakhouse", "Argentinian", "Bar"],
+    "family-friendly": false,
+    "vegan-options": false,
+    "rating": 3
+  },
+  {
+    "id": 5,
+    "name": "Viva Cuba",
+    "address": "342 Kirkstall Road, Leeds, LS4 2DS",
+    "cuisine": ["Latin", "Spanish", "Cuban"],
+    "family-friendly": true,
+    "vegan-options": true,
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "name": "The Brunswick",
+    "address": "82 North Street, Leeds LS2 7PN England",
+    "cuisine": ["Bar", "British", "Pub"],
+    "family-friendly": true,
+    "vegan-options": true,
+    "rating": 4
+  }
+]
