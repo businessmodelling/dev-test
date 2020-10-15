@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Reflection;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,9 +40,17 @@ namespace RestaurantListings
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "dist";
+            });
+
+            services.AddSwaggerGen(configuration =>
+            {
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                configuration.IncludeXmlComments(xmlPath);
             });
         }
 
@@ -64,6 +75,9 @@ namespace RestaurantListings
             {
                 app.UseSpaStaticFiles();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(configuration => configuration.SwaggerEndpoint("/swagger/v1/swagger.json", "API"));
 
             app.UseRouting();
 

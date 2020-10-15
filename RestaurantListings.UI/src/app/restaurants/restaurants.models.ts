@@ -6,6 +6,7 @@ export interface Restaurant {
   phoneNumber: string;
   rating: number;
   tags: string[];
+  photoUri: string | null;
   familyFriendly: boolean;
   veganFriendly: boolean;
 }

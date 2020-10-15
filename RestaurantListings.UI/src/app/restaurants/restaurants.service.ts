@@ -11,9 +11,9 @@ export class RestaurantsService {
   constructor(private http: HttpClient) {}
 
   /**
-   * Fetches the available restaurants.
+   * Gets the available restaurants.
    */
   getRestaurants(): Observable<Restaurant[]> {
-    throw new Error();
+    return this.http.get<Restaurant[]>('/api/restaurants');
   }
 }

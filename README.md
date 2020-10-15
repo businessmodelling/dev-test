@@ -1,26 +1,39 @@
-# Tech Test
+# BMA Dev Test
 
-## Task requirements
+## RestaurantListings
 
-The challenge is to build a full-stack application to display the data and to browse restaurant listings.
+RestaurantListings is simple restaurant viewer app. The functionality is quite simple: Fetch the list of available restaurants from the API and display them to the user. The user should be able to search the restaurants with a variety of filters. A basic boilerplate has been provided for the app which consists of two main components:
 
-Feel free to spend as much or as little time on the exercise as you like as long as the following requirements have been met.
+- RestaurantListings - The AspNetCore backend
+- RestaurantListings.UI - The Angular frontend
 
-- Project must be hosted on a public repository (GitHub/Bitbucket)
-- Feel free to use whatever FE framework (Angular/React/Vue.js) / libraries / packages you like
-  - State management capability
-  - Styling appropriate to choice of framework (do not use pre-existing CSS/design system)
-- API component must be written in .NET core
-- You may include tests
-- Please include a readme documenting the application architecture and running instructions
+The application can be started by running the main **RestaurantListings**
 
-### The Tasks
+```bash
+dotnet run -p ./RestaurantListings
+```
 
-1. Write an API to manage CRUD of restaurants
-   - Restaurants should have a name, description, tags etc (see example.json)
-1. Display a list containing all of the data for each listing. The UI is at your discretion but please make it as clear and user-friendly as possible.
-1. Include functionality to allow the user to filter the listings by cuisine.
-1. Include functionality to allow the user to filter the listing by vegan friendly and family friendly.
-1. Ensure that the filters allow for multiple type selections e.g. if a user selects a "British" cuisine and "vegan options, they should only see the options that meet both criteria exclusively
-1. Include functionality to allow the user to do advanced searching.
-1. Allow user to create, edit and delete restaurants.
+This will start both the API and Angular frontend.
+
+## Requirements
+
+The initial implementation has been already been completed; but it's ugly, buggy and uses a variety of bad practices. Refactor the app to meet the following requirements:
+
+- The user is presented with a list of restaurants:
+
+  - The list should show the image, title, description, and other basic info
+  - Make the layout as responsive as possible
+  - The list should use semantically sound HTML and modern CSS practices
+
+- The user should be able to filter restaurants efficiently and consistently via a number of options:
+
+  - Searching the name via the search bar
+  - Through the tags, which should be displayed alphabetically. Multiple tags can be selected at a time
+  - Through the family friendly and vegan options, which should check the relevant flags on the restaurant
+
+- Add basic rating functionality to the API and frontend:
+
+  - Only signed in users should be able to rate a restaurant
+  - The rating should only be between 1 and 5
+  - The rating should be displayed on the restaurant list
+  - Only one rating per user per restaurant should be allowed

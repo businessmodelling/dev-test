@@ -1,5 +1,5 @@
 :host {
-  position: sticky;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -14,4 +14,10 @@
 
 .spacer {
   flex: 1;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
 }
