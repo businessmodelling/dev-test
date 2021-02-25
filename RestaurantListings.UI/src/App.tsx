@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Navbar } from "./components/Navbar";
 import { NavbarLink } from "./components/NavbarLink";
@@ -29,7 +29,8 @@ function App() {
       </Navbar>
 
       <Routes>
-        <Route path="/" element={<Restaurants />} />
+        <Route path="/" element={<Navigate to="/restaurants" />} />
+        <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/auth/*" element={<AuthRoot />} />
       </Routes>
     </>
