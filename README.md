@@ -29,8 +29,8 @@ The initial implementation has been already been completed; but it's ugly, buggy
 
 (**Note:** approximate time allocation to do the work is included in brackets)
 
-- Make the restaurant list more attractive for teh end user _(15 to 20 Miutes)_
-- 
+- Make the restaurant list more attractive for the end user _(15 to 20 Miutes)_
+
 - The user should be able to filter restaurants efficiently and consistently via a number of options:
 
   - Through the tags:
