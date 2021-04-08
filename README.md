@@ -13,7 +13,7 @@ The application can be started by running the main **RestaurantListings**
 dotnet run -p ./RestaurantListings
 ```
 
-This will start both the API and React frontend.
+This will start both the API and React frontend. A Swagger/OpenAPI UI is available on https://localhost:5001/swagger.
 
 ## Requirements
 
@@ -27,23 +27,26 @@ The initial implementation has been already been completed; but it's ugly, buggy
   - **BONUS**: Make the layout responsive
   - **BONUS**: Lazy load the restaurants page
 
-(**Note:** approximate time allocation to do the work is included in brackets)
-
-- Make the restaurant list more attractive for the end user _(15 to 20 Minutes)_
-
 - The user should be able to filter restaurants efficiently and consistently via a number of options:
 
   - Through the tags:
-    - which should be displayed alphabetically _(5 Minutes)_
-    - Multiple tags can be selected at a time _(10 Minutes)_
-    - No duplicate tags should be shown _(5 Minutes)_
-    - Correcting functional erorrs in this section of work _(10 Minutes)_
-  - Through the family friendly and vegan options, which should check the relevant flags on the restaurant _(10 Minutes)_
+    - which should be displayed alphabetically
+    - Multiple tags can be selected at a time
+    - No duplicate tags should be shown
+  - Through the family friendly and vegan options, which should check the relevant flags on the restaurant
 
-- Add basic rating functionality to the API and frontend:
+- Add two or more of the following features:
 
-  - Only signed in users should be able to rate a restaurant _(Front-end: 30 Minutes) (Backend: 30 Minutes)_
-    - The rating should be restricted between 1 and 5
-  - Recalculate the average restaurant rating when a new rating is applied _(10 Minutes)_
-  - Display the average restaurant rating on the restaurant list _(Front-end: 5 minutes) (Back-end: 5 Minutes)_
-  - Only one rating per user per restaurant should be allowed, but they are allowed to change their rating _(5 Minutes)_
+  - Add a search bar to the filters to allow users to search through the restaurants.
+
+  - Add the ability for **signed in users** to create a new restaurant:
+
+    - New restaurants can be created by sending a POST request to the `/api/restaurants` endpoint. It accepts the following restaurant properties: `name`, `description`, `phoneNumber`, `address`, `veganFriendly`, `familyFriendly` with `name`, `phoneNumber`, and `address` being required.
+    - The form should have basic error handling and validation.
+
+  - Add basic rating functionality to the API and frontend:
+    - Only signed in users should be able to rate a restaurant
+    - The rating should only be between 1 and 5
+    - Recalculate the average restaurant rating when a new rating is applied
+    - Display the average restaurant rating on the restaurant list
+    - Only one rating per user per restaurant should be allowed, but they are allowed to change their rating

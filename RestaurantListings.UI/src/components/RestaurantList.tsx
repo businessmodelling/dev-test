@@ -10,8 +10,6 @@ export interface RestaurantListProps {
 export function RestaurantList(props: RestaurantListProps) {
   const { restaurants = [] } = props;
 
-  console.log(restaurants);
-
   return (
     <div>
       {restaurants.map((restaurant) => (

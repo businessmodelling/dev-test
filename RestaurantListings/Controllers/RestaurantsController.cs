@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantListings.Data;
 using RestaurantListings.Data.Entities;
+using RestaurantListings.Models;
 
 namespace RestaurantListings.Controllers
 {
@@ -27,6 +30,22 @@ namespace RestaurantListings.Controllers
         public IEnumerable<Restaurant> Get()
         {
             return _context.Restaurants.ToList();
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="Restaurant"/>.
+        /// </summary>
+        /// <param name="model">The restaurant <see cref="RestaurantModel">model</see>.</param>
+        /// <returns>The created <see cref="Restaurant"/>.</returns>
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Create([FromBody] RestaurantModel model)
+        {
+            var restaurant = model.ToEntity();
+            _context.Restaurants.Add(restaurant);
+            await _context.SaveChangesAsync();
+
+            return Ok(restaurant);
         }
     }
 }
