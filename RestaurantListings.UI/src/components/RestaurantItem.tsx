@@ -7,20 +7,21 @@ export interface RestaurantItemProps {
 export function RestaurantItem(props: RestaurantItemProps) {
   const { restaurant } = props;
   return (
-    <div>
-      <div style={{ float: "left" }}>
+    <div className="restaurant-container">
+      <div>
         <img
-          className="photo-img"
-          width="100px"
-          height="100px"
+          className="restaurant-image"
           src={restaurant.photoUri}
+          alt={restaurant.name}
         />
       </div>
 
-      <h3>{restaurant.name}</h3>
-      <div>{restaurant.address}</div>
-      <div>{restaurant.description}</div>
-      <div>{restaurant.phoneNumber}</div>
+      <div>
+        <h3>{restaurant.name}</h3>
+        <h4>{restaurant.address}</h4>
+        <p>{restaurant.description}</p>
+        <p><i>Tel.</i> {restaurant.phoneNumber}</p>
+      </div>
     </div>
   );
 }
