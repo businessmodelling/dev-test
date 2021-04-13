@@ -17,7 +17,9 @@ export function Restaurants() {
     async function fetchRestaurants() {
       const data = await getRestaurants();
       setRestaurants(data);
-      setTags(data.flatMap((x) => x.tags));
+      const allTags = data.flatMap((x) => x.tags);
+      const sortedUniqueTags = allTags.filter((v, i, a) => a.indexOf(v) === i).sort()
+      setTags(sortedUniqueTags);
     }
 
     fetchRestaurants();
