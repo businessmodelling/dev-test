@@ -1,0 +1,17 @@
+.restaurant-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+img.restaurant-image {
+  width: 250px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 3px;
+}
