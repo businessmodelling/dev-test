@@ -8,6 +8,7 @@ import {
   RestaurantFiltersState,
 } from "../components/RestaurantFilters";
 import { Restaurant } from "../interfaces/restaurant";
+import { RestaurantSearch } from "../components/RestaurantSearch"
 
 export function Restaurants() {
   const [tags, setTags] = useState<string[]>([]);
@@ -47,8 +48,13 @@ export function Restaurants() {
 
   return (
     <Container>
-      <RestaurantFilters tags={tags} onChange={handleFiltersChange} />
-      <RestaurantList restaurants={restaurants} />
+      <div className="sticky">
+        <RestaurantSearch restaurants={restaurants} setRestaurants={setRestaurants} />
+        <RestaurantFilters tags={tags} onChange={handleFiltersChange} />
+      </div>
+      <div>
+        <RestaurantList restaurants={restaurants} />
+      </div>
     </Container>
   );
 }
