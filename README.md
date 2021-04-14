@@ -50,3 +50,9 @@ The initial implementation has been already been completed; but it's ugly, buggy
     - Recalculate the average restaurant rating when a new rating is applied
     - Display the average restaurant rating on the restaurant list
     - Only one rating per user per restaurant should be allowed, but they are allowed to change their rating
+
+  ## Notes
+
+  1. Filters
+     User can set filters, however clearing a filter does not work.
+     I feel that when a filter is cleared, it does not trigger a re-render. Possible issue in `handleFiltersChange`.

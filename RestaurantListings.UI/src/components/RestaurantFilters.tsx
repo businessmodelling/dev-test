@@ -22,7 +22,7 @@ const restaurantFiltersReducer: Reducer<
     case "toggleTag": {
       const tagIndex = state.tags.indexOf(action.payload.tag);
       if (tagIndex !== -1) {
-        return { ...state, tags: state.tags.splice(tagIndex, 1) };
+        return { ...state, tags: state.tags.filter(t => t !== action.payload.tag) };
       } else {
         return { ...state, tags: [...state.tags, action.payload.tag] };
       }
@@ -33,8 +33,7 @@ const restaurantFiltersReducer: Reducer<
     }
 
     case "toggleVeganFriendly": {
-      state.isVeganFriendly = !state.isVeganFriendly;
-      return state;
+      return { ...state, isVeganFriendly: !state.isVeganFriendly };
     }
 
     default:
