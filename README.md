@@ -55,4 +55,11 @@ The initial implementation has been already been completed; but it's ugly, buggy
 
   1. Filters
      User can set filters, however clearing a filter does not work.
-     I feel that when a filter is cleared, it does not trigger a re-render. Possible issue in `handleFiltersChange`.
+     When a filter is cleared, it does not trigger a re-render so does not show updated restaurants. Possible issue in `handleFiltersChange` and/or `useEffect` in `./Restaurants`.
+
+  2. Search
+     User can search for a restaurant.
+     With more time, better styling of search bar/button and Reset button for search.
+
+  3. Styling
+     Added SASS as preferred styling solution.
